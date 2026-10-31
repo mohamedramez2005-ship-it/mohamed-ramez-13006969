@@ -1,0 +1,7 @@
+body {font-family:Arial,sans-serif;color:#1b2b46;background-color:#edf3fa;}
+.page {max-width:960px;margin:0 auto;}
+header {display:flex;justify-content:space-between;align-items:center;padding:22px 0;border-bottom:2px solid #d7e2ef;}
+nav a {color:#174aa5;text-decoration:none;margin-left:18px;}
+.card-list {display:flex;gap:18px;flex-wrap:wrap;}
+.card {padding:22px;border-radius:12px;background-color:#fff;flex:1 1 180px;box-shadow:0 3px 14px #182e4918;}
+.price {color:#14529a;font-weight:700;}
