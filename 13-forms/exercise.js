@@ -1,0 +1,5 @@
+export function readForm(){return {name:document.querySelector("#name").value.trim(),price:Number(document.querySelector("#price").value)};}
+export function clearForm(){document.querySelector("#name").value="";document.querySelector("#price").value="";}
+export function renderList(items){const ul=document.querySelector("#list");ul.replaceChildren();items.forEach(({name,price})=>{const li=document.createElement("li");li.className="card";const h=document.createElement("h3");h.textContent=name;const p=document.createElement("p");p.className="price";p.textContent=`${price} EGP`;li.append(h,p);ul.append(li);});}
+const items=[];
+export function wireForm(){document.querySelector("#product-form").addEventListener("submit",event=>{event.preventDefault();const item=readForm(),error=document.querySelector("#error");if(!item.name){error.textContent="Give the product a name.";return;}if(!document.querySelector("#price").value.trim()||!(item.price>0)){error.textContent="Give the product a price.";return;}error.textContent="";items.push(item);renderList(items);clearForm();});}
